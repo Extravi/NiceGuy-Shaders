@@ -60,21 +60,6 @@
 uniform float Timer < source = "timer"; >;
 uniform float Frame < source = "framecount"; >;
 
-float GetAspectRatio()
-{
-    // calculate the width and height from reciprocal values
-    float width = 1.0 / BUFFER_RCP_WIDTH;
-    float height = 1.0 / BUFFER_RCP_HEIGHT;
-
-    // return the aspect ratio (width / height)
-    return width / height;
-}
-
-float2 getPix()
-{
-    return float2(BUFFER_RCP_WIDTH, BUFFER_RCP_HEIGHT);
-}
-
 #define LDepth ReShade::GetLinearizedDepth
 
 #define FAR_PLANE RESHADE_DEPTH_LINEARIZATION_FAR_PLANE 
