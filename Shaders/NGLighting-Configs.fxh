@@ -1,5 +1,3 @@
-#define AspectRatio BUFFER_WIDTH/BUFFER_HEIGHT
-
 #ifndef UI_DIFFICULTY
  #define UI_DIFFICULTY 0
 #endif
