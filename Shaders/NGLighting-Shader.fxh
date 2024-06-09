@@ -623,15 +623,8 @@ void DoRayMarch(float3 noise, float3 position, float3 raydir, out float3 Reflect
 	raypos = position + raydir * steplength;
 	float raydepth = -RAYDEPTH;
 	
-#if UI_DIFFICULTY == 1
 	float RayInc = RAYINC;
 	[loop]for(i = 0; i < UI_RAYSTEPS; i++)
-#else
-	const int RaySteps[5] = {17, 65, 161, 321, 501}; 
-	const float RayIncPreset[5] = {2, 1.14, 1.045, 1.02, 1.012};
-	float RayInc = RayIncPreset[UI_QUALITY_PRESET];
-	[loop]for(i = 0; i < RaySteps[UI_QUALITY_PRESET]; i++)
-#endif
 	{
 		UVraypos = PostoUV(raypos);
 #if __RENDERER__ >= 0xa000 // If DX10 or higher
@@ -1012,14 +1005,6 @@ void TemporalStabilizer(float4 vpos : SV_Position, float2 texcoord : TexCoord, o
 	LerpFac = saturate(LerpFac);
 	//current = clamp(current, SharpenMin, SharpenMax);
 	FinalColor = lerp(current, chistory, LerpFac);
-	
-	if(SharpenGI||(RESOLUTION_SCALE_<1&&!UI_DIFFICULTY))
-	{
-		SharpenMean /= shape+1;
-		//will make the sharpness adapt to the noise (less noise => more sharpening)
-		float4 weight = 1-saturate(Var * 2 - 1);
-		FinalColor = FinalColor + (FinalColor - SharpenMean) * weight * 1;
-	}
 	FinalColor = clamp(FinalColor, max(0.00000001, SharpenMin), SharpenMax);
 }
 
