@@ -17,22 +17,22 @@
 //clamps the maximum luma of pixels to avoid unsolvable fireflies
 #define LUM_MAX 25
 
-#define HLDIV 4 //multiply history length by this value before evaluating the radius
-#define TemporalFilterDisocclusionThreshold 0.004
+#define HLDIV 0 //multiply history length by this value before evaluating the radius
+#define TemporalFilterDisocclusionThreshold 0.010
 #define ANTI_LAG_ENABLED 1
 //Motion Based Deghosting Threshold is the minimum value to be multiplied to the history length.
 //Higher value causes more ghosting but less blur. Too low values might result in strong flickering in motion.
 #define MBSDThreshold 0.05 //Default is 0.05
-#define MBSDMultiplier 160 //Default is 90
+#define MBSDMultiplier 90 //Default is 90
 
 //Temporal stabilizer Intensity
-#define TSIntensity 0.8
+#define TSIntensity 3
 //Temporal Stabilizer Clamping kernel shape
 #define shape 8//4 for cross, 8 for square
 #define TEMPORAL_STABILIZER_MINMAX_CLAMPING 1
 #define TEMPORAL_STABILIZER_VARIANCE_CLIPPING 1
 //Temporal Refine min blend value. lower is more stable but ghosty and too low values may introduce banding
-#define TRThreshold 0.001
+#define TRThreshold 3
 
 //Smooth Normals configs. It uses a separable bilateral blur which uses only normals as determinator. 
 #define SNThreshold 2.5 //Bilateral Blur Threshold for Smooth normals passes. default is 0.5
