@@ -1,5 +1,5 @@
 // force UI_DIFFICULTY off or on
-#define UI_DIFFICULTY 1
+#define UI_DIFFICULTY 1 // off
 
 #define DEBUG 0
 
