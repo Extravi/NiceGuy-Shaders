@@ -110,7 +110,7 @@ uniform int MAX_Frames <
 				 "introduces more temporal lag.";
 	ui_category_closed = true;
 	ui_min = 8;
-	ui_max = 64;
+	ui_max = 8;
 > = 8;
 
 uniform float Sthreshold <
