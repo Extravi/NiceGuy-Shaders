@@ -139,6 +139,7 @@ uniform float EXP <
 	ui_label = "Reflection rim fade";
 	ui_type = "slider";
 	ui_category = "Blending Options";
+	ui_tooltip = "Blending intensity for shiny materials.";
 	ui_min = 1;
 	ui_max = 10;
 > = 4;
