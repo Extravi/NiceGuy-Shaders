@@ -28,12 +28,12 @@ uniform int UI_QUALITY_PRESET <
 uniform bool UseCatrom <
 	ui_label = "Use Catrom resampling";
 	ui_tooltip = "Uses Catrom resampling for Upscaling and  Reprojection. Slower but sharper.";
-> = 0;
+> = 0; // false
 
 uniform bool SharpenGI <
 	ui_label = "Sharpen the GI";
 	ui_tooltip = "(No performance impact) Further improves the edge clarity. Try Catrom resampling first tho.";
-> = 1;
+> = 0; // false
 
 uniform float fov <
 	ui_label = "Field of View";
@@ -42,7 +42,7 @@ uniform float fov <
 	ui_tooltip = "Set it according to the game's field of view.";
 	ui_min = 50;
 	ui_max = 120;
-> = 70;
+> = 50;
 
 uniform float BUMP <
 	ui_label = "Bump mapping";
@@ -99,7 +99,7 @@ uniform float RAYDEPTH <
 	ui_category_closed = true;
 	ui_min = 0.05;
 	ui_max = 10;
-> = 2;
+> = 5;
 
 uniform float MVErrorTolerance <
 	ui_label = "Motion Vector\nError Tolerance";
@@ -111,7 +111,7 @@ uniform float MVErrorTolerance <
 				 "temporal accumulation";
 	ui_category_closed = true;
 	ui_step = 0.01;
-> = 0.95;
+> = 0.96;
 
 uniform int MAX_Frames <
 	ui_label = "History Length";
@@ -156,7 +156,7 @@ uniform float AO_Radius_Reflection <
 	ui_type = "slider";
 	ui_category = "Blending Options";
 	ui_tooltip = "Radius of AO for the GI.";
-> = 1;
+> = 0.25;
 
 uniform float AO_Intensity <
 	ui_label = "AO Power";
