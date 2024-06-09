@@ -66,7 +66,7 @@ uniform float RAYINC <
 	ui_tooltip = "Increases ray length at the cost of accuracy.";
 	ui_category_closed = true;
 	ui_min = 1;
-	ui_max = 5;
+	ui_max = 5; // 2 default
 > = 2;
 
 uniform uint UI_RAYSTEPS <
