@@ -161,7 +161,7 @@ uniform float depthfade <
 				 "Reduces blending issues within in-game fogs.";
 	ui_min = 0;
 	ui_max = 1;
-> = 0.8;
+> = 1;
 
 uniform bool LinearConvert <
 	ui_type = "radio";
