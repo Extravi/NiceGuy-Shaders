@@ -1,5 +1,5 @@
-// force UI_DIFFICULTY
-#define UI_DIFFICULTY 1
+// force UI_DIFFICULTY off or on
+#define UI_DIFFICULTY 0
 
 #define DEBUG 0
 
@@ -68,5 +68,4 @@
 #define AO_Radius_Background 1
 #define AO_Radius_Reflection 0.25
 #define SkyDepth 0.99
-#define UI_RAYSTEPS 100
 #endif
