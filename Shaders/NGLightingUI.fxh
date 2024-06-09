@@ -51,7 +51,7 @@ uniform float BUMP <
 	ui_tooltip = "Adds tiny details to the lighting.";
 	ui_min = 0.0;
 	ui_max = 1;
-> = 1;
+> = 0.5;
 
 uniform float roughness <
 	ui_label = "Roughness";
@@ -136,10 +136,9 @@ uniform float Sthreshold <
 static const bool HLFix = 1;
 
 uniform float EXP <
-	ui_label = "Fresnel Exponent";
+	ui_label = "Reflection rim fade";
 	ui_type = "slider";
 	ui_category = "Blending Options";
-	ui_tooltip = "Blending intensity for shiny materials.";
 	ui_min = 1;
 	ui_max = 10;
 > = 4;
@@ -163,7 +162,7 @@ uniform float AO_Intensity <
 	ui_type = "slider";
 	ui_category = "Blending Options";
 	ui_tooltip = "AO falloff curve";
-> = 1;
+> = 0.67;
 
 uniform float depthfade <
 	ui_label = "Depth Fade";
@@ -183,8 +182,6 @@ uniform bool LinearConvert <
 	ui_category_closed = true;
 > = 1;
 
-
-
 uniform float2 SatExp <
 	ui_type = "slider";
 	ui_label = "Saturation\n& Exposure";
@@ -192,7 +189,7 @@ uniform float2 SatExp <
 	ui_tooltip = "Left slider is Saturation. Right one is Exposure.";
 	ui_category_closed = true;
 	ui_min = 0;
-	ui_max = 2;
+	ui_max = 4;
 > = float2(1,1);
 
 uniform uint debug <
