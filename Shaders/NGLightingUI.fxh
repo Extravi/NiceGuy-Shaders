@@ -29,7 +29,7 @@ uniform float fov <
 	ui_category = "Ray Tracing";
 	ui_tooltip = "Set it according to the game's field of view.";
 	ui_min = 50;
-	ui_max = 120;
+	ui_max = 9999;
 > = 70;
 
 uniform float BUMP <
@@ -38,7 +38,7 @@ uniform float BUMP <
 	ui_category = "Ray Tracing";
 	ui_tooltip = "Adds tiny details to the lighting.";
 	ui_min = 0.0;
-	ui_max = 1;
+	ui_max = 9999;
 > = 1;
 
 uniform float roughness <
@@ -47,7 +47,7 @@ uniform float roughness <
 	ui_category = "Ray Tracing";
 	ui_tooltip = "Blurriness of the reflections.";
 	ui_min = 0.0;
-	ui_max = 0.999;
+	ui_max = 9999;
 > = 0.4;
 
 uniform bool TemporalRefine <
@@ -66,7 +66,7 @@ uniform float RAYINC <
 	ui_tooltip = "Increases ray length at the cost of accuracy.";
 	ui_category_closed = true;
 	ui_min = 1;
-	ui_max = 2;
+	ui_max = 9999;
 > = 2;
 
 uniform uint UI_RAYSTEPS <
@@ -76,7 +76,7 @@ uniform uint UI_RAYSTEPS <
 	ui_tooltip = "Increases ray length at the cost of performance.";
 	ui_category_closed = true;
 	ui_min = 1;
-	ui_max = 32;
+	ui_max = 9999;
 > = 16;
 
 uniform float RAYDEPTH <
@@ -86,7 +86,7 @@ uniform float RAYDEPTH <
 	ui_tooltip = "More coherency at the cost of accuracy.";
 	ui_category_closed = true;
 	ui_min = 0.05;
-	ui_max = 10;
+	ui_max = 9999;
 > = 2;
 
 uniform float MVErrorTolerance <
@@ -110,7 +110,7 @@ uniform int MAX_Frames <
 				 "introduces more temporal lag.";
 	ui_category_closed = true;
 	ui_min = 8;
-	ui_max = 64;
+	ui_max = 9999;
 > = 64;
 
 uniform float Sthreshold <
@@ -129,7 +129,7 @@ uniform float EXP <
 	ui_category = "Blending Options";
 	ui_tooltip = "Blending intensity for shiny materials.";
 	ui_min = 1;
-	ui_max = 10;
+	ui_max = 9999;
 > = 4;
 
 uniform float AO_Radius_Background <
@@ -160,7 +160,7 @@ uniform float depthfade <
 	ui_tooltip = "Higher values decrease the intesity on distant objects.\n"
 				 "Reduces blending issues within in-game fogs.";
 	ui_min = 0;
-	ui_max = 1;
+	ui_max = 9999;
 > = 0.8;
 
 uniform bool LinearConvert <
@@ -180,7 +180,7 @@ uniform float2 SatExp <
 	ui_tooltip = "Left slider is Saturation. Right one is Exposure.";
 	ui_category_closed = true;
 	ui_min = 0;
-	ui_max = 2;
+	ui_max = 9999;
 > = float2(1,1);
 
 uniform uint debug <
@@ -189,7 +189,7 @@ uniform uint debug <
 	ui_category = "Extra";
 	ui_category_closed = true;
 	ui_min = 0;
-	ui_max = 5;
+	ui_max = 9999;
 > = 0;
 
 uniform float SkyDepth <
