@@ -15,6 +15,7 @@ uniform int Hints<
 			  
 	ui_category = "Hints - Please Read for good results.";
 	ui_category_closed = true;
+	ui_label = " ";
 	ui_type = "radio";
 >;
 
@@ -247,6 +248,7 @@ uniform int Credits<
 			  
 	ui_category = "Credits";
 	ui_category_closed = true;
+	ui_label = " ";
 	ui_type = "radio";
 >;
 
@@ -260,5 +262,6 @@ uniform int Preprocessordefinitionstooltip<
 			  //"NGL_HYBRID_MODE : 0 means you can use only one effect at a time. Either GI or Reflection. 1 means you have both effects simultaniously but it's a slower (less than 2 times)";
 	ui_category = "Preprocessor definitions tooltip";
 	ui_category_closed = true;
+	ui_label = " ";
 	ui_type = "radio";
 >;
