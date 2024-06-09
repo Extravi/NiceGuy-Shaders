@@ -111,7 +111,7 @@ uniform int MAX_Frames <
 	ui_category_closed = true;
 	ui_min = 8;
 	ui_max = 64;
-> = 64;
+> = 8;
 
 uniform float Sthreshold <
 	ui_label = "Spatial Denoiser\nThreshold";
