@@ -66,7 +66,7 @@ uniform float RAYINC <
 	ui_tooltip = "Increases ray length at the cost of accuracy.";
 	ui_category_closed = true;
 	ui_min = 1;
-	ui_max = 5; // 2 default
+	ui_max = 2;
 > = 2;
 
 uniform uint UI_RAYSTEPS <
@@ -76,8 +76,8 @@ uniform uint UI_RAYSTEPS <
 	ui_tooltip = "Increases ray length at the cost of performance.";
 	ui_category_closed = true;
 	ui_min = 1;
-	ui_max = 64;
-> = 64; // 32 default
+	ui_max = 32;
+> = 32;
 
 uniform float RAYDEPTH <
 	ui_label = "Surface depth";
