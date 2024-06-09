@@ -13,18 +13,6 @@ uniform int GI <
 > = 1;
 #endif
 
-// enable setting not in UI_DIFFICULTY
-#if UI_DIFFICULTY == 0
-
-// not in UI_DIFFICULTY
-uniform int UI_QUALITY_PRESET <
-	ui_type = "combo";
-	ui_label = "Quality Preset";
-	ui_items = "Low (16)\0Medium (64)\0High (160)\0Very High (320)\0Extreme (500)\0";
-> = 1;
-
-#endif
-
 uniform bool UseCatrom <
 	ui_label = "Use Catrom resampling";
 	ui_tooltip = "Uses Catrom resampling for Upscaling and  Reprojection. Slower but sharper.";
@@ -156,14 +144,14 @@ uniform float AO_Radius_Reflection <
 	ui_type = "slider";
 	ui_category = "Blending Options";
 	ui_tooltip = "Radius of AO for the GI.";
-> = 0.25;
+> = 1;
 
 uniform float AO_Intensity <
 	ui_label = "AO Power";
 	ui_type = "slider";
 	ui_category = "Blending Options";
 	ui_tooltip = "AO falloff curve";
-> = 0.67;
+> = 1;
 
 uniform float depthfade <
 	ui_label = "Depth Fade";
