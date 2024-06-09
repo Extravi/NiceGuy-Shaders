@@ -1,6 +1,3 @@
-// force UI_DIFFICULTY
-#define UI_DIFFICULTY 1
-
 #ifndef SMOOTH_NORMALS
  #define SMOOTH_NORMALS 1
 #endif
