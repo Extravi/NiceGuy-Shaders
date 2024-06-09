@@ -1,3 +1,5 @@
+#define DEBUG 0
+
 #ifndef SMOOTH_NORMALS
  #define SMOOTH_NORMALS 1
 #endif
@@ -50,6 +52,7 @@
 #define STEPNOISE 1
 
 // advanced settings
+#if DEBUG
 #define fov 50
 #define UseCatrom false
 #define SharpenGI false
@@ -63,3 +66,4 @@
 #define AO_Radius_Reflection 0.25
 #define SkyDepth 0.99
 #define UI_RAYSTEPS 100
+#endif
