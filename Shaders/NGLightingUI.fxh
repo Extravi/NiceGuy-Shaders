@@ -77,7 +77,7 @@ uniform uint UI_RAYSTEPS <
 	ui_category_closed = true;
 	ui_min = 1;
 	ui_max = 64;
-> = 64;
+> = 64; // 32 default
 
 uniform float RAYDEPTH <
 	ui_label = "Surface depth";
