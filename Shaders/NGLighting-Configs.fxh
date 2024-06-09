@@ -26,13 +26,13 @@
 #define MBSDMultiplier 90 //Default is 90
 
 //Temporal stabilizer Intensity
-#define TSIntensity 3
+#define TSIntensity 0.8
 //Temporal Stabilizer Clamping kernel shape
 #define shape 8//4 for cross, 8 for square
 #define TEMPORAL_STABILIZER_MINMAX_CLAMPING 1
 #define TEMPORAL_STABILIZER_VARIANCE_CLIPPING 1
 //Temporal Refine min blend value. lower is more stable but ghosty and too low values may introduce banding
-#define TRThreshold 3
+#define TRThreshold 0.001
 
 //Smooth Normals configs. It uses a separable bilateral blur which uses only normals as determinator. 
 #define SNThreshold 2.5 //Bilateral Blur Threshold for Smooth normals passes. default is 0.5
