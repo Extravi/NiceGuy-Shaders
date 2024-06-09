@@ -1,4 +1,6 @@
-#define UI_DIFFICULTY 1
+#ifndef UI_DIFFICULTY
+ #define UI_DIFFICULTY 1
+#endif
 
 #ifndef SMOOTH_NORMALS
  #define SMOOTH_NORMALS 1
@@ -51,6 +53,7 @@
 
 #define STEPNOISE 1
 
+#if UI_DIFFICULTY
 // advanced settings
 #define fov 50
 #define UseCatrom false
@@ -65,3 +68,21 @@
 #define AO_Radius_Reflection 0.25
 #define SkyDepth 0.99
 #define UI_RAYSTEPS 100
+#endif
+
+// ignore
+#if !UI_DIFFICULTY
+//simple UI mode preset
+#define fov 50
+#define UseCatrom false
+#define SharpenGI false
+#define TemporalRefine 0
+#define RAYINC 2
+#define RAYDEPTH 5
+#define MVErrorTolerance 0.96
+#define MAX_Frames 64
+#define Sthreshold 0.003
+#define AO_Radius_Background 1
+#define AO_Radius_Reflection 0.25
+#define SkyDepth 0.99
+#endif
