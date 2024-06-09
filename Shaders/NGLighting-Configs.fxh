@@ -1,6 +1,3 @@
-// force UI_DIFFICULTY off or on
-#define UI_DIFFICULTY 0
-
 #define DEBUG 0
 
 #ifndef SMOOTH_NORMALS
