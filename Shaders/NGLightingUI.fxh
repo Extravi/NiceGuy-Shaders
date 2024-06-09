@@ -5,20 +5,6 @@
 //license
 //CC0 ^_^
 
-uniform int Hints<
-	ui_text = "Set UI_DIFFICULTY to 0 to make the UI simpler if you want.\n"
-			  "Advanced categories are unnecessary options that\n"
-			  "can break the look of the shader if modified improperly.\n\n"
-			  "Use with ReShade_MotionVectors at Quarter Resolution.\n"
-			  "Using higher resolutions for the motion vector only makes it WORSE "
-			  "when the game is using temporal filters (TAA,DLSS2,FSR2,TAAU,TSR,etc.)";
-			  
-	ui_category = "Hints - Please Read for good results.";
-	ui_category_closed = true;
-	ui_label = " ";
-	ui_type = "radio";
->;
-
 #if !NGL_HYBRID_MODE
 uniform int GI <
 	ui_type = "combo";
@@ -247,20 +233,6 @@ uniform int Credits<
 			  "https://www.shadertoy.com/view/lldBRn";
 			  
 	ui_category = "Credits";
-	ui_category_closed = true;
-	ui_label = " ";
-	ui_type = "radio";
->;
-
-uniform int Preprocessordefinitionstooltip<
-	ui_text = "RESOLUTION_SCALE_ : Lower values are much faster but may be a bit blurrier.\n\n"
-			  
-			  "SMOOTH_NORMALS : 0 is disabed, 1 is low quality and fast, 2 is high quality and a bit slow, 3 is Photography mode is really slow.\n\n"
-			  
-			  "UI_DIFFICULTY : 0 is EZ, 1 is for ReShade shamans.";//\n\n"
-
-			  //"NGL_HYBRID_MODE : 0 means you can use only one effect at a time. Either GI or Reflection. 1 means you have both effects simultaniously but it's a slower (less than 2 times)";
-	ui_category = "Preprocessor definitions tooltip";
 	ui_category_closed = true;
 	ui_label = " ";
 	ui_type = "radio";
