@@ -33,7 +33,7 @@ uniform bool UseCatrom <
 uniform bool SharpenGI <
 	ui_label = "Sharpen the GI";
 	ui_tooltip = "(No performance impact) Further improves the edge clarity. Try Catrom resampling first tho.";
-> = 0; // false
+> = 1; // true
 
 uniform float fov <
 	ui_label = "Field of View";
