@@ -28,7 +28,7 @@ uniform float fov <
 	ui_type = "slider";
 	ui_category = "Ray Tracing";
 	ui_tooltip = "Set it according to the game's field of view.";
-	ui_min = 50;
+	ui_min = 18;
 	ui_max = 120;
 > = 50;
 
@@ -66,7 +66,7 @@ uniform float RAYINC <
 	ui_tooltip = "Increases ray length at the cost of accuracy.";
 	ui_category_closed = true;
 	ui_min = 1;
-	ui_max = 2;
+	ui_max = 5;
 > = 2;
 
 uniform uint UI_RAYSTEPS <
@@ -76,8 +76,8 @@ uniform uint UI_RAYSTEPS <
 	ui_tooltip = "Increases ray length at the cost of performance.";
 	ui_category_closed = true;
 	ui_min = 1;
-	ui_max = 32;
-> = 16;
+	ui_max = 64;
+> = 64;
 
 uniform float RAYDEPTH <
 	ui_label = "Surface depth";
@@ -179,7 +179,7 @@ uniform float2 SatExp <
 	ui_category_closed = true;
 	ui_min = 0;
 	ui_max = 4;
-> = float2(1,1);
+> = float2(4,4);
 
 uniform uint debug <
 	ui_type = "combo";
